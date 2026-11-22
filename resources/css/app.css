@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@source '../views';
+
+body { background: #f8fafc; color: #1e293b; }
+.btn { display:inline-flex; align-items:center; border-radius:.5rem; padding:.55rem 1rem; font-weight:600; font-size:.875rem; }
+.btn-primary { background:#4f46e5; color:white; } .btn-primary:hover { background:#4338ca; }
+.btn-secondary { background:#e2e8f0; color:#334155; } .btn-danger { background:#fee2e2; color:#b91c1c; }
+.input { width:100%; border:1px solid #cbd5e1; border-radius:.5rem; padding:.6rem .75rem; background:white; }
+.label { display:block; font-weight:600; font-size:.875rem; margin-bottom:.3rem; }
+.card { border:1px solid #e2e8f0; background:white; border-radius:.75rem; padding:1.25rem; box-shadow:0 1px 2px #00000008; }

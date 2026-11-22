@@ -1,0 +1,27 @@
+{
+    "name": "student/tsa4-tasks",
+    "type": "project",
+    "description": "IT0049 TSA4 Tasks for Today Management System",
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^2.10"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.24",
+        "laravel/breeze": "^2.3",
+        "laravel/pail": "^1.2",
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": { "App\\": "app/", "Database\\Factories\\": "database/factories/", "Database\\Seeders\\": "database/seeders/" }
+    },
+    "scripts": {
+        "setup": ["composer install", "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"", "@php artisan key:generate", "@php artisan migrate --seed", "npm install", "npm run build"],
+        "dev": ["Composer\\Config::disableProcessTimeout", "npx concurrently -c \"#93c5fd,#c4b5fd,#fca5a5,#fdba74\" \"php artisan serve\" \"php artisan queue:listen database --tries=1\" \"npm run dev\" --names=server,queue,vite"],
+        "post-autoload-dump": ["@php artisan package:discover --ansi"]
+    },
+    "extra": { "laravel": { "dont-discover": [] } },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

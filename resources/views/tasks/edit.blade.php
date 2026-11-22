@@ -1,0 +1,1 @@
+@extends('layouts.app') @section('content')<div class="card mx-auto max-w-3xl"><h1 class="mb-6 text-2xl font-bold">Edit task</h1><form method="POST" action="{{ route('tasks.update',$task) }}">@csrf @method('PUT') @include('tasks.form',['buttonText'=>'Save changes'])</form></div>@endsection
